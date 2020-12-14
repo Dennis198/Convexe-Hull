@@ -1,0 +1,22 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+.vscode
+
+# dependencies
+\convexe-hull/node_modules
+\convexe-hull/.pnp
+\convexe-hull/.pnp.js
+
+# testing
+\convexe-hull/coverage
+
+# misc
+\convexe-hull.DS_Store
+\convexe-hull.env.local
+\convexe-hull.env.development.local
+\convexe-hull.env.test.local
+\convexe-hull.env.production.local
+
+\convexe-hull/npm-debug.log*
+\convexe-hull/yarn-debug.log*
+\convexe-hull/yarn-error.log*
