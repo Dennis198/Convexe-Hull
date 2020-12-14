@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Conexe-Hull/static/css/main.6ab53faa.chunk.css",
+    "main.js": "/Conexe-Hull/static/js/main.61acece2.chunk.js",
+    "main.js.map": "/Conexe-Hull/static/js/main.61acece2.chunk.js.map",
+    "runtime-main.js": "/Conexe-Hull/static/js/runtime-main.372f00fb.js",
+    "runtime-main.js.map": "/Conexe-Hull/static/js/runtime-main.372f00fb.js.map",
+    "static/js/2.7e7e6a75.chunk.js": "/Conexe-Hull/static/js/2.7e7e6a75.chunk.js",
+    "static/js/2.7e7e6a75.chunk.js.map": "/Conexe-Hull/static/js/2.7e7e6a75.chunk.js.map",
+    "static/js/3.eaab782d.chunk.js": "/Conexe-Hull/static/js/3.eaab782d.chunk.js",
+    "static/js/3.eaab782d.chunk.js.map": "/Conexe-Hull/static/js/3.eaab782d.chunk.js.map",
+    "index.html": "/Conexe-Hull/index.html",
+    "static/css/main.6ab53faa.chunk.css.map": "/Conexe-Hull/static/css/main.6ab53faa.chunk.css.map",
+    "static/js/2.7e7e6a75.chunk.js.LICENSE.txt": "/Conexe-Hull/static/js/2.7e7e6a75.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.372f00fb.js",
+    "static/js/2.7e7e6a75.chunk.js",
+    "static/css/main.6ab53faa.chunk.css",
+    "static/js/main.61acece2.chunk.js"
+  ]
+}
