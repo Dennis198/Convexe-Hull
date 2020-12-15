@@ -7,8 +7,9 @@ const CANVAS_WIDTH=800;
 const CANVAS_HEIGHT=400;
 
 const NONE_ALGO=-1;
-const GIFT_WRAPPING=0;
-const NAIVE=1;
+const NAIVE=0;
+const GIFT_WRAPPING=1;
+const GRAHAM_SCAN=2;
 
 export default class ConvexeHull extends React.Component{
     intervallID=0
@@ -30,11 +31,14 @@ export default class ConvexeHull extends React.Component{
     fastCompute(){
         this.setState({isFinished:true});
         switch(this.state.algoMode){
+            case NAIVE:
+                this.state.plane.naive(true);
+                break;
             case GIFT_WRAPPING:
                 this.state.plane.giftWrapping(true);
                 break;
-            case NAIVE:
-                this.state.plane.naive(true);
+            case GRAHAM_SCAN:
+                this.state.plane.grahamScan(true);
                 break;
             default:
                 this.setState({isRunning:false})
@@ -47,6 +51,14 @@ export default class ConvexeHull extends React.Component{
     animation(){
         this.setState({isRunning:true})
         switch(this.state.algoMode){
+            case NAIVE:
+                this.state.plane.naive(false);
+                this.intervallID = setInterval(() => {
+                    if(this.state.plane.isAlgorithmFinished()){
+                        this.stop(this.intervallID);
+                    } 
+                },50);
+                break;
             case GIFT_WRAPPING:
                 this.state.plane.giftWrapping(false);
                 this.intervallID = setInterval(() => {
@@ -55,8 +67,8 @@ export default class ConvexeHull extends React.Component{
                     } 
                 },50);
                 break;
-            case NAIVE:
-                this.state.plane.naive(false);
+            case GRAHAM_SCAN:
+                this.state.plane.grahamScan(false);
                 this.intervallID = setInterval(() => {
                     if(this.state.plane.isAlgorithmFinished()){
                         this.stop(this.intervallID);
@@ -102,7 +114,7 @@ export default class ConvexeHull extends React.Component{
 
     //Add Random Points in the Canvas
     addRandomPoints(){
-        for(let i=0;i< 10;i++){
+        for(let i=0;i< 5;i++){
             let x = Math.random()*CANVAS_WIDTH;
             let y = Math.random()*CANVAS_HEIGHT;
             this.state.plane.addPoint(x,y);
@@ -117,11 +129,14 @@ export default class ConvexeHull extends React.Component{
         this.state.plane.addPoint(pos.x,pos.y);
         if(this.state.isFinished){
             switch (this.state.algoMode){
+                case NAIVE:
+                    this.state.plane.naive(true);
+                    break;
                 case GIFT_WRAPPING:
                     this.state.plane.giftWrapping(true);
                     break;
-                case NAIVE:
-                    this.state.plane.naive(true);
+                case GRAHAM_SCAN:
+                    this.state.plane.grahamScan(true);
                     break;
                 default:
                     break;
@@ -150,8 +165,9 @@ export default class ConvexeHull extends React.Component{
                 <h1>Convexe Hull</h1>
                 <select className="select-css" onChange={(e,val) => this.switchAlgoMode(e,val)}>
                     <option value="-1">Select Algorithm</option>
-                    <option value={GIFT_WRAPPING}>Gift Wrapping</option>
                     <option value={NAIVE}>Naive</option>
+                    <option value={GIFT_WRAPPING}>Gift Wrapping</option>
+                    <option value={GRAHAM_SCAN}>Graham Scan</option>
                 </select>
                 <Button disabled={this.state.isRunning} variant="outlined" color="primary" onClick={() => this.fastCompute()}>Fast Compute</Button>
                 <Button disabled={this.state.isRunning} variant="outlined" color="primary" onClick={() => this.animation()}>Animation</Button>

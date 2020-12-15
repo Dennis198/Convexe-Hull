@@ -35,7 +35,7 @@ export function drawLine(start, end, color="black"){
 }
 
 //Draws all Lines of the hull
-export function  drawPolygonLines(hull, color="black"){
+export function  drawPolygonLines(hull, color="black", endToStart=false){
     var canvas = document.getElementById("2d-plane");
     var context = canvas.getContext("2d");
     context.strokeStyle=color;
@@ -46,7 +46,9 @@ export function  drawPolygonLines(hull, color="black"){
         context.lineTo(hull[i].x,hull[i].y);
         context.stroke();
     }
-    context.lineTo(hull[0].x,hull[0].y);
+    if(endToStart){
+        context.lineTo(hull[0].x,hull[0].y);    
+    }
     context.stroke();
 }
 

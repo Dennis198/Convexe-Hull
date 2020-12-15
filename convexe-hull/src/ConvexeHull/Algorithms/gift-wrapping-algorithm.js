@@ -76,7 +76,7 @@ export default class GiftWrappingAlgorithm{
     //Draws the Finished Convexe Hull
     drawFinish(){
         reset();
-        drawPolygonLines(this.hull, "red");
+        drawPolygonLines(this.hull, "red", true);
         for(let i=0;i<this.points.length;i++){
             this.points[i].draw();
         }

@@ -5,6 +5,7 @@
 import Point from "./Point/point";
 import GiftWrappingAlgorithm from "../Algorithms/gift-wrapping-algorithm";
 import NaiveAlgorithm from "../Algorithms/naive";
+import GrahamScan from "../Algorithms//graham-scan";
 import {reset} from "../Help/drawMethods";
 
 export default class Plane{
@@ -39,6 +40,19 @@ export default class Plane{
             return
         }
         this.algorithm = new GiftWrappingAlgorithm(this.points);
+        if(isFinished){
+            this.algorithm.instantCompute();    
+        } else {
+            this.algorithm.start();
+        }
+    }
+
+    //Computes the Graham Scan Algorithm to find the Convexe Hull
+    grahamScan(isFinished){
+        if(this.points.length<3){
+            return
+        }
+        this.algorithm = new GrahamScan(this.points);
         if(isFinished){
             this.algorithm.instantCompute();    
         } else {
