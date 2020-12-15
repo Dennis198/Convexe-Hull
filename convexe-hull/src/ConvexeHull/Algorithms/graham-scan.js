@@ -13,6 +13,10 @@ export default class GrahamScan{
     }
 
     instantCompute(){  
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         // Sort the Array in increasing Order of the Angel they and the point this.points[0] make with the x-axis
         this.points = initAngleArray(this.points[0], this.points);
         this.hull.push(this.points[1]);
@@ -32,6 +36,10 @@ export default class GrahamScan{
     }
 
     start(){
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         // Sort the Array in increasing Order of the Angel they and the point this.points[0] make with the x-axis
         this.points = initAngleArray(this.points[0], this.points);
         this.hull.push(this.points[1]);
@@ -70,6 +78,13 @@ export default class GrahamScan{
         for(let p=0;p<this.hull.length;p++){
             this.hull[p].draw(5,"red");
         } 
+    }
+
+    //Draws the hull if there are less than 3 points
+    drawFinishIfLessThan3Points(){
+        this.hull=this.points;
+        this.drawCurrentState(true);
+        this.stop(); 
     }
 
     //Stops the Interval and sets success to true (Convexe Hull is Found)

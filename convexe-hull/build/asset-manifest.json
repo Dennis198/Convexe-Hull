@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Convexe-Hull/static/css/main.6ab53faa.chunk.css",
-    "main.js": "/Convexe-Hull/static/js/main.54a6d824.chunk.js",
-    "main.js.map": "/Convexe-Hull/static/js/main.54a6d824.chunk.js.map",
+    "main.js": "/Convexe-Hull/static/js/main.421abf7b.chunk.js",
+    "main.js.map": "/Convexe-Hull/static/js/main.421abf7b.chunk.js.map",
     "runtime-main.js": "/Convexe-Hull/static/js/runtime-main.701f622a.js",
     "runtime-main.js.map": "/Convexe-Hull/static/js/runtime-main.701f622a.js.map",
     "static/js/2.761da9c6.chunk.js": "/Convexe-Hull/static/js/2.761da9c6.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.701f622a.js",
     "static/js/2.761da9c6.chunk.js",
     "static/css/main.6ab53faa.chunk.css",
-    "static/js/main.54a6d824.chunk.js"
+    "static/js/main.421abf7b.chunk.js"
   ]
 }

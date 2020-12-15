@@ -15,6 +15,10 @@ export default class NaiveAlgorithm{
 
     //Computes the Algorithm "fast" (Only the finished Hull is displayed)
     instantCompute(){
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         for(let i=0;i<this.points.length;i++){
             for(let j=0;j<this.points.length;j++){
                 if(i===j) continue;
@@ -46,6 +50,10 @@ export default class NaiveAlgorithm{
 
     //Computes the Algorithm "slow" (Every Step is displayed)
     start(){
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         let i=0;
         let j=0;
         let k=0;
@@ -118,7 +126,6 @@ export default class NaiveAlgorithm{
 
    //Draws the Finished Convexe Hull
     drawFinish(){
-        reset();
         for(let i=0;i<this.hullLines.length;i++){
             drawLine(this.hullLines[i].start,this.hullLines[i].end,"red");
         }
@@ -129,6 +136,14 @@ export default class NaiveAlgorithm{
         for(let i=0;i<this.hull.length;i++){
             this.hull[i].draw(5,"red");
         }
+    }
+
+     //Draws the hull if there are less than 3 points
+    drawFinishIfLessThan3Points(){
+        this.hull=this.points;
+        if(this.points.length===2)this.hullLines.push({start:this.points[0], end: this.points[1]});
+        this.drawFinish();
+        this.stop(); 
     }
 
     //Stops the Interval and sets success to true (Convexe Hull is Found)

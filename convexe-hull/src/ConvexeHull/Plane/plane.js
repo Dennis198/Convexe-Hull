@@ -23,7 +23,7 @@ export default class Plane{
 
     //Computes the Naive Algorithm to find the Convexe Hull
     naive(isFinished){
-        if(this.points.length<3){
+        if(this.points.length==0){
             return
         }
         this.algorithm = new NaiveAlgorithm(this.points);
@@ -36,7 +36,7 @@ export default class Plane{
 
     //Computes the Gift Wrapping Algorithm to find the Convexe Hull
     giftWrapping(isFinished){
-        if(this.points.length<3){
+        if(this.points.length===0){
             return
         }
         this.algorithm = new GiftWrappingAlgorithm(this.points);
@@ -49,7 +49,7 @@ export default class Plane{
 
     //Computes the Graham Scan Algorithm to find the Convexe Hull
     grahamScan(isFinished){
-        if(this.points.length<3){
+        if(this.points.length===0){
             return
         }
         this.algorithm = new GrahamScan(this.points);

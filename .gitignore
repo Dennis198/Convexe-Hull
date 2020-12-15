@@ -20,3 +20,6 @@
 \convexe-hull/npm-debug.log*
 \convexe-hull/yarn-debug.log*
 \convexe-hull/yarn-error.log*
+
+#newAlgo
+\convexe-hull/src/ConvexeHull/Algorithms/divide-and-conquer.js

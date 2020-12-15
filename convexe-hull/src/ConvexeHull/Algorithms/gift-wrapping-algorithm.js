@@ -19,6 +19,10 @@ export default class GiftWrappingAlgorithm{
 
     //Computes the Algorithm "fast" (Only the finished Hull is displayed)
     instantCompute(){
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         this.sucess=false
         while(!this.sucess){
             this.calculateNextStep();
@@ -28,6 +32,10 @@ export default class GiftWrappingAlgorithm{
 
     //Computes the Algorithm "slow" (Every Step is displayed)
     start(){
+        if(this.points.length<3){
+            this.drawFinishIfLessThan3Points();
+            return;
+        }
         let intervallID = setInterval(() => {
             this.drawCurrentState();
             this.calculateNextStep(intervallID);           
@@ -84,6 +92,13 @@ export default class GiftWrappingAlgorithm{
         for(let i=0;i<this.hull.length;i++){
             this.hull[i].draw(5,"red");
         }
+    }
+
+    //Draws the hull if there are less than 3 points
+    drawFinishIfLessThan3Points(){
+        this.hull=this.points;
+        this.drawFinish();
+        this.stop(); 
     }
 
     //Stops the Interval and sets success to true (Convexe Hull is Found)
