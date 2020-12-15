@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Convexe-Hull/static/css/main.6ab53faa.chunk.css",
-    "main.js": "/Convexe-Hull/static/js/main.61acece2.chunk.js",
-    "main.js.map": "/Convexe-Hull/static/js/main.61acece2.chunk.js.map",
+    "main.js": "/Convexe-Hull/static/js/main.54a6d824.chunk.js",
+    "main.js.map": "/Convexe-Hull/static/js/main.54a6d824.chunk.js.map",
     "runtime-main.js": "/Convexe-Hull/static/js/runtime-main.701f622a.js",
     "runtime-main.js.map": "/Convexe-Hull/static/js/runtime-main.701f622a.js.map",
-    "static/js/2.7e7e6a75.chunk.js": "/Convexe-Hull/static/js/2.7e7e6a75.chunk.js",
-    "static/js/2.7e7e6a75.chunk.js.map": "/Convexe-Hull/static/js/2.7e7e6a75.chunk.js.map",
+    "static/js/2.761da9c6.chunk.js": "/Convexe-Hull/static/js/2.761da9c6.chunk.js",
+    "static/js/2.761da9c6.chunk.js.map": "/Convexe-Hull/static/js/2.761da9c6.chunk.js.map",
     "static/js/3.eaab782d.chunk.js": "/Convexe-Hull/static/js/3.eaab782d.chunk.js",
     "static/js/3.eaab782d.chunk.js.map": "/Convexe-Hull/static/js/3.eaab782d.chunk.js.map",
     "index.html": "/Convexe-Hull/index.html",
     "static/css/main.6ab53faa.chunk.css.map": "/Convexe-Hull/static/css/main.6ab53faa.chunk.css.map",
-    "static/js/2.7e7e6a75.chunk.js.LICENSE.txt": "/Convexe-Hull/static/js/2.7e7e6a75.chunk.js.LICENSE.txt"
+    "static/js/2.761da9c6.chunk.js.LICENSE.txt": "/Convexe-Hull/static/js/2.761da9c6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.701f622a.js",
-    "static/js/2.7e7e6a75.chunk.js",
+    "static/js/2.761da9c6.chunk.js",
     "static/css/main.6ab53faa.chunk.css",
-    "static/js/main.61acece2.chunk.js"
+    "static/js/main.54a6d824.chunk.js"
   ]
 }
